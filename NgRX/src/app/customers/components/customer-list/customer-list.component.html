@@ -1,0 +1,51 @@
+<div class="row">
+  <h2>Customers</h2>
+
+  <table mat-table [dataSource]="customers$ | async" class="table lightweight-table">
+    <tbody>
+
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef> Phone </th>
+        <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="membership">
+        <th mat-header-cell *matHeaderCellDef> Membership </th>
+        <td mat-cell *matCellDef="let element">
+          {{element.membership}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+
+          <a mat-button color="primary" class="btn" (click)=editCustomer(element)>edit</a>
+          <a mat-button color="primary" class="btn" (click)=deleteCustomer(element)> delete</a>
+        </td>
+      </ng-container>
+
+
+      <th>
+        <a mat-button color="primary" class="btn">edit</a>
+        <a mat-button color="primary" class="btn"> delete</a>
+      </th>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </tbody>
+  </table>
+</div>

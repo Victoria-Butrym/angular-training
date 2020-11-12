@@ -1,0 +1,25 @@
+{
+  "customers": [
+    {
+      "name": "Jonh Doe",
+      "phone": "88005553535",
+      "address": "123 Sudgbegtbrtbn Street",
+      "membership": "Basic",
+      "id": "1"
+    },
+    {
+      "name": "Victoria-Butrym",
+      "phone": "+375 29 771 24 95",
+      "address": "123 elm",
+      "membership": "Basic",
+      "id": "9P3-kUS"
+    },
+    {
+      "name": "spike spiegel",
+      "phone": "why?",
+      "address": "bebop",
+      "membership": "Pro",
+      "id": "Z_HQoGy"
+    }
+  ]
+}
